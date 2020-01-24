@@ -1,4 +1,4 @@
-# app-multi-display
+# app-multi-window
 
 This is an example of how to implement multiple windows for OakOS using a single display
 
@@ -33,6 +33,8 @@ docker-compose down
 
 ## Example Installation
 
+If there is no environmental variable send for `WINDOW_X` then the window is positioned according to its `WINDOW_PERCENT`.
+
 ``` json
 {
   "services": [
@@ -42,7 +44,7 @@ docker-compose down
         "TZ": "America/Phoenix",
         "REMOTE_URL":"https://www.fast.com",
         "WINDOW_PERCENT":".5",
-        "WINDOW_X": "0",
+        "WINDOW_X": "100",
         "BACKGROUND_COLOR":"#000000",
         "WINDOW_ONTOP":"false",
         "SSL_EXCEPTIONS":"localhost;*.google.com",

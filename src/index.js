@@ -16,8 +16,12 @@ function loadWindow (position) {
       let percent = process.env.WINDOW_PERCENT || 1
       let size = (width * percent)  + "x" + height
       let x = width -  (width * percent)
-      if(process.env.WINDOW_X ) {
+      if( process.env.WINDOW_X ) {
         x = parseInt(process.env.WINDOW_X)
+      }
+      let y = displays[display].workArea.y
+      if( process.env.WINDOW_Y ) {
+        y = parseInt(process.env.WINDOW_Y)
       }
       let background = process.env.BACKGROUND_COLOR || '#ffffff'
       let ontop = Boolean(process.env.WINDOW_ONTOP) || false
@@ -33,7 +37,7 @@ function loadWindow (position) {
         ontop,
         size: size,
         x: x,
-        y: displays[display].workArea.y,
+        y: y,
         sslExceptions:  exceptions,
         insecure,
         fullscreen
