@@ -1,6 +1,6 @@
 # app-multi-window
 
-This is an example of how to implement multiple windows for OakOS using a single display
+This is an example of how to implement multiple windows for OakOS using a single display with multiple applications installed
 
 ## Running locally
 
@@ -42,9 +42,24 @@ If there is no environmental variable send for `WINDOW_X` then the window is pos
       "image": "index.docker.io/oaklabs/app-multi-window:latest",
       "environment": {
         "TZ": "America/Phoenix",
+        "REMOTE_URL":"https://www.zivelo.com",
+        "WINDOW_PERCENT":".7",
+        "WINDOW_X": "0",
+        "BACKGROUND_COLOR":"#000000",
+        "WINDOW_ONTOP":"false",
+        "SSL_EXCEPTIONS":"localhost;*.google.com",
+        "WINDOW_INSECURE":"false",
+        "DISPLAY_ID":"0",
+        "ELECTRON_DISABLE_SECURITY_WARNINGS":"true",
+        "WAIT_ON":"https://www.fast.com;https://www.google.com"
+      }
+    },
+    {
+      "image": "index.docker.io/oaklabs/app-multi-window:latest",
+      "environment": {
+        "TZ": "America/Phoenix",
         "REMOTE_URL":"https://www.fast.com",
-        "WINDOW_PERCENT":".5",
-        "WINDOW_X": "100",
+        "WINDOW_PERCENT":".3",
         "BACKGROUND_COLOR":"#000000",
         "WINDOW_ONTOP":"false",
         "SSL_EXCEPTIONS":"localhost;*.google.com",
@@ -56,5 +71,4 @@ If there is no environmental variable send for `WINDOW_X` then the window is pos
     }
   ]
 }
-
 ```
