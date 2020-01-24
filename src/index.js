@@ -4,7 +4,7 @@ let dns = require('dns')
 
 require('dotenv').config()
 
-function loadWindow (position) {
+function loadWindow () {
   
       let exceptions = ['localhost']
       let displays = oak.getDisplays()
@@ -72,8 +72,8 @@ oak.on('ready', () => {
   waitOn(opts, function (err) {
     if (err) { return handleError(err); }
     // once here, all resources are available
-    loadWindow("one")
-    loadWindow("two")
+    loadWindow()
+
   });
   
 })
