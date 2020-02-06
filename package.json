@@ -1,7 +1,7 @@
 {
-  "name": "app-multi-display",
+  "name": "app-multi-window",
   "version": "1.0.0",
-  "description": "App for just a simple website in OakOS",
+  "description": "App for multiple windows on one display in OakOS",
   "main": "src/index.js",
   "engines": {
     "node": "10.15.3"
@@ -22,13 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oaklabsinc/app-multi-display.git"
+    "url": "git+https://github.com/oaklabsinc/app-multi-window.git"
   },
   "author": "richard@joffray.com",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/oaklabsinc/app-multi-display/issues"
+    "url": "https://github.com/oaklabsinc/app-multi-window/issues"
   },
-  "homepage": "https://github.com/oaklabsinc/app-multi-display#readme",
+  "homepage": "https://github.com/oaklabsinc/app-multi-window#readme",
   "private": true
 }
